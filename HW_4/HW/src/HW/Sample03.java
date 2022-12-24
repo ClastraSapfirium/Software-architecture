@@ -195,21 +195,19 @@ class MobileApp{
  * Автобусная станция
  */
 
+
 class BusStation{
 
-    private Database database;
+    private final TicketProvider ticketProvider;
 
-    public BusStation(String qrcode){
-        for (Ticket ticket: database.getTickets()) {
-            if (ticket.getQrcode().equals(qrcode)){
-                ticket.setEnable(false);
-                System.out.println("Билет оплачен");
-            }
-            else{
-                System.out.println("Проезд не оплачен");
-            }
-        }
+    public BusStation(TicketProvider ticketProvider){
+        this.ticketProvider = ticketProvider;
     }
+
+    public boolean checkTicket(String qrCode){
+        return ticketProvider.checkTicket(qrCode);
+    }
+
 }
 
 /*
