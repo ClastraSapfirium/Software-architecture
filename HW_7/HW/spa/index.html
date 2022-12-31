@@ -1,0 +1,50 @@
+<!--
+Необходимо спроектировать сервис отчётов для компании оптовой торговли.
+
+а. Доменная модель (компания, товарные категории, табличный отчёт, графики и диаграммы, финансовые показатели, ..), в виде текста Домен – атрибуты.
+b. Сформировать компоненты бизнес-логики (функциональные) необходимые для построения этих отчётов. 
+Показать связь между компонентами интерфейса и компонентами бизнес-логики.
+
+-->
+
+<!DOCTYPE html>
+<html>
+      <head>
+        <title>SPA Shopping Sample</title>
+
+        <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+      </head>
+      <body>
+            <div class="container">
+                  <nav class="navbar navbar-expand-lg bg-light">
+                        <div class="container-fluid">
+                          <a class="navbar-brand" href="/">SPA SHOP</a>
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" onclick="route()" href="/">Home</a>
+                              </li>
+                              <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" onclick="route()" href="/settings">Settings</a>
+                              </li>
+                              <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" onclick="route()" href="/about">Abount company</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" onclick="route()" href="/tables">Tables</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                      <div id="main-page" >
+                      </div>
+            </div>
+            <script src="js/router.js"></script>
+            <script src="lib/jquery/jquery.js"></script>
+            <script src="lib/bootstrap/js/bootstrap.bundle.js"></script>
+      </body>
+</html>
